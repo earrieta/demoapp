@@ -1,0 +1,29 @@
+<html>
+<body>
+	
+<script>
+$(document).ready(function() {
+	document.getElementById('transButton').addEventListener("click", function() { 	 		document.getElementById('tofadeout').className += ' animated fadeOut';
+		document.getElementsByClassName('bkg_image')[0].className += ' animated fadeIn'; 
+	  })
+	       
+});
+</script>
+
+<div class="main">
+	<%= image_tag("image1.jpg", :alt => "Map of the World", :height => "525", :width => "1029", :class => "bkg_image") %>
+	<div id="tofadeout">
+		<h1 class="title animated fadeInDown"> Welcome to Travel Finder! <h1>
+			<div class="nonmain">
+
+				<p class="animated fadeIn"> This site focuses on bringing travel options to you with just simple clicks on the map. Then refine your search by just typing what you what you want -- and that's what we'll try to find you! </p>
+	
+				<h3 class="mainlink animated fadeInUp"> <button id= "transButton" class="start-button pure-button"> Get Started! </button> </h3> 
+			</div>
+	</div>
+</div>
+
+<%= link_to("Quick Map Search", {:controller => "maps", :action => "show" })%>
+
+</body>
+</html>
