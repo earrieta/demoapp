@@ -19,16 +19,24 @@ $(document).ready(function() {
 		<h1 class="title animated fadeInRight"> Welcome to Travel Finder! <h1>
 			<div class="nonmain">
 
-				<p class="animated fadeIn"> This site focuses on bringing travel options to you with just simple clicks on the map. Then refine your search by just typing what you want -- and that's what we'll try to find you! </p>
+				<p class="animated fadeIn"> This site focuses on bringing travel options to you with just a simple search from origin to destination. Then refine your search by just typing what you want -- cheapest prices, certain dates, or shortest travel times, etc. and we'll find just that for you! </p>
 	
 				<h3 class="mainlink animated fadeInUp"> <button id= "transButton" class="start-button pure-button"> Get Started! </button> </h3> 
 			</div>
 	</div>
 	<div class="searchbox" id="searchbox_frontpage">
-		<%= form_tag("/maps", method: "get", class: "main-search pure-form") do %>
-		  <%= label_tag(:q, "Search for:") %>
-		  <%= text_field_tag(:q) %>
-		  <%= submit_tag("Search", class: "main-search pure-button") %>
+		<%= form_tag("/maps", method: "get", class: "pure-form pure-form-aligned") do %>
+		  	<div class="pure-control-group map-imposed">
+				<%= label_tag(:q, "From:") %>
+		 	 	<%= text_field_tag(:q) %>
+	  		</div>
+			<div class="pure-control-group map-imposed">
+		 	   	<%= label_tag(:r, "To:") %>
+		  	 	<%= text_field_tag(:r) %>
+			</div>
+			<div class="pure-control-group main-search">
+		  	  	<%= submit_tag("Search", class: "search-button pure-button") %>
+	  		</div>
 		<% end %>
 	</div>
 </div>

@@ -74,7 +74,7 @@ button.start-button {
 
 div.searchbox {
 	width: 400px;
-	text-align: center;
+	//text-align: center;
 	display: none;
 	position: relative;
 	top: 0;
@@ -85,9 +85,24 @@ div.searchbox {
 	padding: 1em
 }
 
+.map-imposed {
+	color: white;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+input.search-button {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	background: rgb(66, 184, 221); /* this is a light blue */
+}
+
 .main-search {
     color: white;
-    //border-radius: 4px;
+	text-align: center;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    //background: rgb(28, 184, 65); /* this is a green */ 
+}
+
+strong.search-item {
+	color: rgb(66, 184, 221);
 }
