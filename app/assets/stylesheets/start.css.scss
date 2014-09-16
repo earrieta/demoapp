@@ -26,6 +26,32 @@ img.bkg_image {
 	opacity: .35;
 }
 
+@-webkit-keyframes fadeInThirtyFive {
+  0% {opacity: .35;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeInThirtyFive {
+  0% {opacity: .35;}
+  100% {opacity: 1;}
+}
+
+img.front_image {
+	top: 0;
+	left: 0;
+	position: absolute;
+	margin: 20px auto;
+	padding: 10px;
+	z-index: -1;
+	opacity: 1;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+	-webkit-animation-name: fadeInThirtyFive;
+		    animation-name: fadeInThirtyFive;
+}
+
 div.main {
 	//opacity: 1;
     width: 1029px;
@@ -44,4 +70,24 @@ button.start-button {
     border-radius: 4px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     background: rgb(28, 184, 65); /* this is a green */
+}
+
+div.searchbox {
+	width: 400px;
+	text-align: center;
+	display: none;
+	position: relative;
+	top: 0;
+	left: 0;    
+	margin: 10px auto;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 1em;
+	padding: 1em
+}
+
+.main-search {
+    color: white;
+    //border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    //background: rgb(28, 184, 65); /* this is a green */ 
 }
